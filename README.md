@@ -1,2 +1,15 @@
-# ALGOMAU_CS
-A collection of assignments, projects, and coursework from the Bachelor of Computer Science (B.CS) program at Algoma University. The repository is organized by subjects and semesters, covering fundamental and advanced topics in computer science such as programming, data structures, algorithms, databases, operating systems, and more.
+
+# AlgomaU Computer Science
+
+Hey👋, I'm Vivek Kumar, A bachelors of Computer Science student at AlgomaU pursuing majors in Computer Science and Minors in Business Administration. 
+
+
+## Authors
+
+- [@DevModeVivek](https://github.com/DevModeVivek)
+
+
+
+## Support
+
+For support, email vivkumar@algomau.ca.
