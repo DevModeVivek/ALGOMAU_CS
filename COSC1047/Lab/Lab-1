@@ -1,0 +1,54 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Lab1Programs {
+    public static void main(String[] args) {
+        System.out.println("---- Program 1 Output ----");
+        runProgram1();
+
+        System.out.println("\n---- Program 2 Output ----");
+        runProgram2();
+    }
+
+    // ---------------- Program 1 ----------------
+    public static void runProgram1() {
+        String data = "251234567,241010101,237654321,259123456,241234567,223456789,256789012,245678901";
+
+        String[] ids = data.split(",");
+
+        System.out.println("Students admitted in 2024 or earlier:");
+        for (String id : ids) {
+            id = id.trim();
+            int year = Integer.parseInt(id.substring(0, 2));
+            if (year <= 24) {
+                System.out.println(id);
+            }
+        }
+    }
+
+    // ---------------- Program 2 ----------------
+    public static void runProgram2() {
+        String data = "251234567, 241010101, 237654321,259123456, 241234567, 223456789, 256789012, 245678901";
+
+        int cutoffYear = 24; // change this to adjust the limit
+
+        Pattern pattern = Pattern.compile("(\\d{2})(\\d{7})");
+        Matcher matcher = pattern.matcher(data);
+
+        System.out.println("Students admitted in " + cutoffYear + " or earlier:");
+        int currentYear = -1;
+
+        while (matcher.find()) {
+            int year = Integer.parseInt(matcher.group(1));
+            String id = matcher.group(1) + matcher.group(2);
+
+            if (year <= cutoffYear) {
+                if (year != currentYear) {
+                    currentYear = year;
+                    System.out.println("\nYear " + year + ":");
+                }
+                System.out.println(id);
+            }
+        }
+    }
+}
